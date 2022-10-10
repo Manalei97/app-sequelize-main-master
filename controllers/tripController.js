@@ -63,7 +63,7 @@ var index = async function(req,res,nex){
         // var id = req.params.id 
         var trip= await models.Trip.findByPk(req.params.id,{
             include: [
-                models.subscription
+                models.Member
         ]
         })
         if (trip){
